@@ -3,3 +3,14 @@
 body {
   background-color: beige;
 }
+h1 {
+  color: cornflowerblue;
+  transition: color 0.3s ease-in-out;
+}
+
+h1.font {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.active {
+  color: tomato;
+}

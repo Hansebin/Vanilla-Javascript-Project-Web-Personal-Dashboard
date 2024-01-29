@@ -1,20 +1,36 @@
-// 자바스크립트 코드 작성
-// 자바스크립트 파일에서는 다른 css 코드를 작성하는 것보다는, html 요소를 가지고 제어하는 코드만 작성하는 것이 좋다.
-// css 코드는 css 파일에서만 작성하는 것이 가장 이상적!
-const h1 = document.querySelector("div.hello:first-child h1");
+const loginForm = document.getElementById("login-from");
+const loginInput = document.querySelector("#login-from input");
+const title = document.getElementById("greeting");
 
-const handleTitleClick = function () {
-  // const currentClassList = h1.classList;
-  const activeClass = "active";
+const HIDDEN_CLASS = "hidden";
+const USERNAME_KEY = "username";
 
-  // if (currentClassList.contains(activeClass)) {
-  //   h1.classList.remove(activeClass);
-  // } else {
-  //   h1.classList.add(activeClass);
-  // }
+const getUserName = localStorage.getItem(USERNAME_KEY);
 
-  // 위의 코드를 아래와 같은 toggle 메서드로 사용 가능! -> 훨씬 더 간단하게 구현 가능
-  h1.classList.toggle(activeClass);
+// 공통으로 사용하는 함수
+const commonFunc = {
+  paintingTitle: function (username) {
+    title.classList.remove(HIDDEN_CLASS);
+    title.innerText = `Hello, ${username}!`;
+  },
 };
 
-h1.addEventListener("click", handleTitleClick);
+// event에 사용하는 함수
+const handleEvent = {
+  submitLoginForm: function (e) {
+    e.preventDefault();
+
+    const usernameInput = loginInput.value;
+    localStorage.setItem(USERNAME_KEY, usernameInput);
+
+    loginForm.classList.add(HIDDEN_CLASS);
+    commonFunc.paintingTitle(usernameInput);
+  },
+};
+
+if (getUserName === null) {
+  loginForm.classList.remove(HIDDEN_CLASS);
+  loginForm.addEventListener("submit", handleEvent.submitLoginForm);
+} else {
+  commonFunc.paintingTitle(getUserName);
+}

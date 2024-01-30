@@ -7,15 +7,13 @@ const USERNAME_KEY = "username";
 
 const getUserName = localStorage.getItem(USERNAME_KEY);
 
-// 공통으로 사용하는 함수
-const commonFunc = {
+const titleCommon = {
   paintingTitle: function (username) {
     title.classList.remove(HIDDEN_CLASS);
     title.innerText = `Hello, ${username}!`;
   },
 };
 
-// event에 사용하는 함수
 const handleEvent = {
   submitLoginForm: function (e) {
     e.preventDefault();
@@ -24,7 +22,7 @@ const handleEvent = {
     localStorage.setItem(USERNAME_KEY, usernameInput);
 
     loginForm.classList.add(HIDDEN_CLASS);
-    commonFunc.paintingTitle(usernameInput);
+    titleCommon.paintingTitle(usernameInput);
   },
 };
 
@@ -32,5 +30,5 @@ if (getUserName === null) {
   loginForm.classList.remove(HIDDEN_CLASS);
   loginForm.addEventListener("submit", handleEvent.submitLoginForm);
 } else {
-  commonFunc.paintingTitle(getUserName);
+  titleCommon.paintingTitle(getUserName);
 }

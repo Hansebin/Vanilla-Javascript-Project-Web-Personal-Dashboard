@@ -10,6 +10,11 @@
   </head>
   <body>
     <section>
+      <div id="weather">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
       <h2 id="clock">00:00:00</h2>
       <form id="login-from" class="hidden">
         <input
@@ -22,6 +27,14 @@
       </form>
       <h1 id="greeting" class="hidden"></h1>
     </section>
+    <form id="todo-form">
+      <input
+        required
+        type="text"
+        placeholder="Write a To Do and Press Enter!"
+      />
+    </form>
+    <ul id="todo-list"></ul>
     <footer id="quote">
       <p></p>
       <p></p>
@@ -30,6 +43,8 @@
     <script src="js/clock.js"></script>
     <script src="js/quotes.js"></script>
     <script src="js/background.js"></script>
+    <script src="js/todo.js"></script>
+    <script src="js/weather.js"></script>
   </body>
 </html>
 

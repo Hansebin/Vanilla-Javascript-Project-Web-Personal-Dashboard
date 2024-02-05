@@ -14,7 +14,7 @@ const titleCommon = {
   },
 };
 
-const handleEvent = {
+const handleEventTitle = {
   submitLoginForm: function (e) {
     e.preventDefault();
 
@@ -28,7 +28,7 @@ const handleEvent = {
 
 if (getUserName === null) {
   loginForm.classList.remove(HIDDEN_CLASS);
-  loginForm.addEventListener("submit", handleEvent.submitLoginForm);
+  loginForm.addEventListener("submit", handleEventTitle.submitLoginForm);
 } else {
   titleCommon.paintingTitle(getUserName);
 }

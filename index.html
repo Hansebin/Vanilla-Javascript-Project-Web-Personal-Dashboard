@@ -6,6 +6,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
     <title>Momentum | everything!</title>
   </head>
   <body>
@@ -26,14 +30,19 @@
         <button>Log In</button>
       </form>
       <h1 id="greeting" class="hidden"></h1>
-      <form id="todo-form">
-        <input
-          required
-          type="text"
-          placeholder="Write a To Do and Press Enter!"
-        />
-      </form>
-      <ul id="todo-list"></ul>
+      <div id="todo-form-container" class="hidden">
+        <form id="todo-form">
+          <input
+            required
+            type="text"
+            placeholder="Write a To Do and Press Enter!"
+          />
+        </form>
+      </div>
+      <div id="todo-list-container" class="hidden">
+        <h3></h3>
+        <ul id="todo-list"></ul>
+      </div>
     </section>
     <footer id="quote">
       <p></p>
@@ -45,6 +54,7 @@
     <script src="js/background.js"></script>
     <script src="js/todo.js"></script>
     <script src="js/weather.js"></script>
+    <script src="js/date.js"></script>
   </body>
 </html>
 

@@ -177,6 +177,89 @@ footer {
   font-weight: 200;
 }
 
+#book-mark-icon {
+  position: absolute;
+  left: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin: 20px 0 0 20px;
+
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+
+  background-color: rgba(0, 0, 0, 0.5);
+  font-size: 20px;
+  color: white;
+
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+#book-mark-icon:hover {
+  color: yellow;
+}
+
+#book-mark-list-container {
+  position: absolute;
+  left: 0;
+
+  margin: 80px 0 0 20px;
+  padding: 20px;
+
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border-radius: 10px;
+}
+#book-mark-list-container p {
+  margin-bottom: 15px;
+
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.6);
+}
+#book-mark-list-container form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+
+  margin-bottom: 50px;
+}
+#book-mark-list-container form input {
+  padding: 10px 5px;
+  margin-right: 10px;
+
+  background: none;
+  border: none;
+  border-bottom: 1px solid white;
+
+  color: white;
+}
+#book-mark-list-container form input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+#book-mark-list-container form input:focus {
+  outline: none;
+}
+#book-mark-list-container form button {
+  padding: 10px 15px;
+
+  background: none;
+  border: 1px solid white;
+  border-radius: 5px;
+
+  font-weight: 600;
+  color: white;
+
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+#book-mark-list-container form button:hover {
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
 #weather {
   position: absolute;
   right: 0;

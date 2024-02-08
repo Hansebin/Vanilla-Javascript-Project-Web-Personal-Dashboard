@@ -1,5 +1,4 @@
 <!-- html 코드 작성 -->
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -14,7 +13,10 @@
     <title>Momentum | everything!</title>
   </head>
   <body>
-    <div id="book-mark-icon">★</div>
+    <di id="icon-container">
+      <div id="book-mark-icon">★</div>
+      <p>Book Mark</p>
+    </di>
     <div id="book-mark-list-container" class="hidden">
       <p>add Book Mark</p>
       <form>
@@ -25,7 +27,7 @@
           placeholder="Write book-mark name"
         />
         <div>
-          <input required type="text" placeholder="Write url" />
+          <input required type="url" placeholder="Write url" />
           <button>add</button>
         </div>
       </form>

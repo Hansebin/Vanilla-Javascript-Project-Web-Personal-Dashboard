@@ -13,8 +13,8 @@ const geo = {
         const tempSpan = document.querySelector("#weather span:nth-child(2)");
         const weatherSpan = document.querySelector("#weather span:last-child");
 
-        nameSpan.innerText = data.name;
-        tempSpan.innerText = data.main.temp;
+        nameSpan.innerText = `⚑ ${data.name} / `;
+        tempSpan.innerText = `${data.main.temp}℃`;
         weatherSpan.innerText = data.weather[0].main;
       });
   },

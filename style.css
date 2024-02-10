@@ -22,10 +22,35 @@ section #clock {
   color: white;
   font-weight: 500;
 }
-section #greeting {
+section #greeting-container {
+  margin-bottom: 20px;
+}
+section #greeting-container #greeting-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 5px;
+}
+section #greeting-container #greeting-box #greeting {
   font-size: 50px;
   color: white;
   font-weight: 400;
+}
+section #greeting-container #greeting-box button {
+  padding: 3px 5px;
+
+  color: white;
+  font-size: 13px;
+
+  background: none;
+  border: 1px solid white;
+  border-radius: 5px;
+
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+section #greeting-container #greeting-box button:hover {
+  background-color: rgba(255, 255, 255, 0.6);
 }
 section #todo-form-container {
   margin-top: 20px;
@@ -144,9 +169,6 @@ section #login-from button {
 }
 section #login-from button:hover {
   background-color: rgba(255, 255, 255, 0.5);
-}
-section #greeting {
-  margin-bottom: 20px;
 }
 
 img {

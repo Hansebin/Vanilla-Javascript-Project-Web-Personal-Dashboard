@@ -1,14 +1,16 @@
-const showClock = document.getElementById("clock");
+const clock = (function () {
+  const clockObj = {
+    $showClock: document.getElementById("clock"),
+    getClock: function () {
+      const date = new Date();
+      const hours = String(date.getHours()).padStart(2, "0");
+      const minutes = String(date.getMinutes()).padStart(2, "0");
+      const seconds = String(date.getSeconds()).padStart(2, "0");
 
-const getClock = function () {
-  const date = new Date();
-  const hours = String(date.getHours()).padStart(2, "0");
-  const minutes = String(date.getMinutes()).padStart(2, "0");
-  const seconds = String(date.getSeconds()).padStart(2, "0");
+      this.$showClock.innerText = `${hours}:${minutes}:${seconds}`;
+    },
+  };
 
-  showClock.innerText = `${hours}:${minutes}:${seconds}`;
-};
-
-// 1초 뒤에 시계가 표시되는 것을 방지하기 위해 getClock함수 실행
-getClock();
-setInterval(getClock, 1000);
+  clockObj.getClock();
+  setInterval(clockObj.getClock.bind(clockObj), 1000);
+})();

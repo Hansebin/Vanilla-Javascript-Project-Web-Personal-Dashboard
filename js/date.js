@@ -1,16 +1,19 @@
-const showDate = document.querySelector("#todo-list-container h3");
-
-(function () {
-  const getDate = new Date();
-
-  const today = {
-    year: getDate.getFullYear(),
-    month: getDate.getMonth() + 1,
-    date: getDate.getDate(),
+const date = (function () {
+  const dateObj = {
+    $showDate: document.querySelector("#todo-list-container h3"),
+    getDate: function () {
+      const currentDate = new Date();
+      const toady = {
+        year: currentDate.getFullYear(),
+        month: currentDate.getMonth() + 1,
+        date: currentDate.getDate(),
+      };
+      this.$showDate.innerText = `${toady.year}.${String(toady.month).padStart(
+        2,
+        0
+      )}.${String(toady.date).padStart(2, 0)} To Do List`;
+    },
   };
 
-  showDate.innerText = `${today.year}.${String(today.month).padStart(
-    2,
-    0
-  )}.${String(today.date).padStart(2, 0)} To Do List`;
+  dateObj.getDate();
 })();

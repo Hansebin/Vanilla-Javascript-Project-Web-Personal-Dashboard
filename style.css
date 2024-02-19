@@ -17,6 +17,11 @@ section {
   justify-content: center;
   align-items: center;
 }
+section #date {
+  font-size: 30px;
+  color: white;
+  font-weight: lighter;
+}
 section #clock {
   font-size: 100px;
   color: white;

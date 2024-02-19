@@ -2,6 +2,10 @@
 
 ### Momentum App Project
 
+#### 📌 배포 사이트
+
+<p>프로젝트 이용해보기 <a href="https://hansebin.github.io/VanillaJavascript-Project-Momentum/" target="_blank">👉🏻 Momentum</a></p>
+
 #### 📆 프로젝트 진행 상황
 
 - 1차 프로젝트 완성(ver 1.0) ✅

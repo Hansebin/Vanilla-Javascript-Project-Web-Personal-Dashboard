@@ -13,8 +13,8 @@
     <title>Momentum | everything!</title>
   </head>
   <body>
-    <di id="icon-container">
-      <div id="book-mark-icon">★</div>
+    <di class="icon-container">
+      <div class="icon">★</div>
       <p>Book Mark</p>
     </di>
     <div id="book-mark-list-container" class="hidden">
@@ -71,6 +71,16 @@
         <ul id="todo-list"></ul>
       </div>
     </section>
+    <div id="logout-container">
+      <div class="icon-container">
+        <div class="icon">↩︎</div>
+        <p>LogOut</p>
+      </div>
+      <form class="hidden">
+        <p>로그아웃 시, 저장된 데이터가 모두 사라집니다.</p>
+        <button>LogOut</button>
+      </form>
+    </div>
     <footer id="quote">
       <p></p>
       <p></p>
@@ -83,6 +93,7 @@
     <script src="js/weather.js"></script>
     <script src="js/date.js"></script>
     <script src="js/book_mark.js"></script>
+    <script src="js/logout.js"></script>
   </body>
 </html>
 

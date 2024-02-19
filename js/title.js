@@ -10,12 +10,14 @@ const title = (function () {
     $title: document.getElementById("greeting"),
     $titleBtn: document.querySelector("#greeting-container button"),
     $toDoFormContainer: document.getElementById("todo-form-container"),
+    $logoutContainer: document.getElementById("logout-container"),
   };
 
   const common = {
     paintingTitle: function (username) {
       elements.$titleContainer.classList.remove(HIDDEN_CLASS);
       elements.$toDoFormContainer.classList.remove(HIDDEN_CLASS);
+      elements.$logoutContainer.classList.remove(HIDDEN_CLASS);
       elements.$title.innerText = `Hello, ${username}!`;
     },
     playLoginForm: function () {
@@ -33,6 +35,7 @@ const title = (function () {
 
       const usernameInput = elements.$loginInput.value;
       localStorage.setItem(USERNAME_KEY, usernameInput);
+      elements.$loginInput.value = "";
 
       elements.$loginForm.classList.add(HIDDEN_CLASS);
       common.paintingTitle(usernameInput);
@@ -41,15 +44,18 @@ const title = (function () {
       localStorage.removeItem(USERNAME_KEY);
       elements.$titleContainer.classList.add(HIDDEN_CLASS);
       elements.$toDoFormContainer.classList.add(HIDDEN_CLASS);
+      elements.$logoutContainer.classList.add(HIDDEN_CLASS);
       common.playLoginForm();
     },
   };
 
   if (getUserName === null) {
     common.playLoginForm();
+    elements.$logoutContainer.classList.add(HIDDEN_CLASS);
   } else {
     common.paintingTitle(getUserName);
     elements.$toDoFormContainer.classList.remove(HIDDEN_CLASS);
+    elements.$logoutContainer.classList.remove(HIDDEN_CLASS);
     elements.$titleBtn.addEventListener("click", handleEvent.clickRenameBtn);
   }
 })();

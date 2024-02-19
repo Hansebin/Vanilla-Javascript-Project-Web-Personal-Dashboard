@@ -4,7 +4,7 @@ const bookMark = (function () {
   let bookMarks = [];
 
   const elements = {
-    $bookMarkIcon: document.getElementById("book-mark-icon"),
+    $bookMarkIcon: document.getElementsByClassName("icon")[0],
     $bookMarkContainer: document.getElementById("book-mark-list-container"),
     $bookMarkForm: document.querySelector("#book-mark-list-container form"),
     $urlNameInput: document.querySelector("#book-mark-list-container input"),

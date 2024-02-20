@@ -1,10 +1,10 @@
-# Vanilla_Javascript Project
+# Vanilla-Javascript Project
 
-### Momentum App Project
+### Web Personal Dashboard Project
 
 #### 📌 배포 사이트
 
-<p>프로젝트 이용해보기 <a href="https://hansebin.github.io/VanillaJavascript-Project-Momentum/" target="_blank">👉🏻 Momentum</a></p>
+<p>프로젝트 이용해보기 <a href="https://hansebin.github.io/Vanilla-Javascript-Project-Web-Personal-Dashboard/" target="_blank">👉🏻 Momentum</a></p>
 
 #### 📆 프로젝트 진행 상황
 
